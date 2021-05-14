@@ -5,13 +5,13 @@ let min = 0;
 let sec = 0;
 let flag = true;
 
-function startTimer() {
+function startTime() {
     if (flag === true) {
         flag = false;
         cycle();
     }
 }
-function stopTimer() {
+function stopTime() {
     if (flag === false) {
         flag = true;
     }
@@ -49,7 +49,7 @@ function cycle() {
     }
 }
 
-function resetTimer() {
+function resetTime() {
     timer.innerHTML = "00:00:00";
     flag = true;
     hr = 0;
