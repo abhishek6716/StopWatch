@@ -4,22 +4,22 @@ let hr = 0;
 let min = 0;
 let sec = 0;
 let milisec = 0;
-let flag = true;
+let isRunning = false;
 
 function startTime() {
-    if (flag === true) {
-        flag = false;
+    if (isRunning === false) {
+        isRunning = true;
         cycle();
     }
 }
 function stopTime() {
-    if (flag === false) {
-        flag = true;
+    if (isRunning === true) {
+        isRunning = false;
     }
 }
 
 function cycle() {
-    if (flag === false) {
+    if (isRunning === true) {
         milisec = parseInt(milisec)
         sec = parseInt(sec);
         min = parseInt(min);
@@ -57,7 +57,7 @@ function cycle() {
 
 function resetTime() {
     timer.innerHTML = "00:00:00:0";
-    flag = true;
+    isRunning = false;
     hr = 0;
     sec = 0;
     min = 0;
